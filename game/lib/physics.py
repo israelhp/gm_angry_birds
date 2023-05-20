@@ -1,0 +1,23 @@
+
+class Physics:
+    @staticmethod
+    def vector(p0, p1):
+        a = p1[0] - p0[0]
+        b = p1[1] - p0[1]
+        return (a, b)
+
+    @staticmethod
+    def unit_vector(v):
+        h = ((v[0] ** 2) + (v[1] ** 2)) ** 0.5
+        if h == 0:
+            h = 0.000000000000001
+        ua = v[0] / h
+        ub = v[1] / h
+        return (ua, ub)
+
+    @staticmethod
+    def distance(xo, yo, x, y):
+        dx = x - xo
+        dy = y - yo
+        d = ((dx ** 2) + (dy ** 2)) ** 0.5
+        return d
